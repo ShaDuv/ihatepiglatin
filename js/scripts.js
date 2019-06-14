@@ -10,5 +10,18 @@ $(document).ready(function () {
     var words = ($('input#original').val()).split(' ');
     console.log(words);
 
+        //This takes each word and breaks it into letters
+      for (i = 0; i < words.length; i++) {
+          var currentWord = words[i];
+          var n = 0;
+          while(n < currentWord.length) {
+            if (currentWord[n] === "q" && currentWord[n+1] === "u") {
+              n += 2
+            } else if (vowels.includes(currentWord[n]) === false) {
+              n++
+            }else {
+              break;
+            }
+          };
       });
     });
