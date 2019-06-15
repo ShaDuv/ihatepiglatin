@@ -23,5 +23,16 @@ $(document).ready(function () {
               break;
             }
           };
+          if (n === 0) {
+            pigLatin.push(currentWord + "way")
+          }
+          else {
+            var firstPart = currentWord.substr(0, n)
+            var stichedWord = currentWord.substr(n) + firstPart + "ay"
+            console.log(stichedWord + "is the slice of word + ay");
+            pigLatin.push(stichedWord)
+
+          }
+        }; console.log(pigLatin.join(" "));
       });
     });
